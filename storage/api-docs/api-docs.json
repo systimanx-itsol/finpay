@@ -1,0 +1,4118 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "InvoiceTool Swagger API",
+        "description": "InvoiceTool Swagger API description",
+        "contact": {
+            "email": "admin@finpay.com"
+        },
+        "version": "1.0.0"
+    },
+    "host": "invoice-tool-nov8.test/",
+    "basePath": "api/v1",
+    "paths": {
+        "/Category": {
+            "get": {
+                "tags": [
+                    "CATEGORY"
+                ],
+                "summary": "Clients Table",
+                "operationId": "cid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/category": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "Category",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CATEGORY"
+                ],
+                "summary": "Category Store",
+                "description": "Category Store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Category name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "image",
+                        "in": "formData",
+                        "description": "Image",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "position",
+                        "in": "formData",
+                        "description": "Position",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "parentcategory",
+                        "in": "formData",
+                        "description": "parentcategory",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Category/{id}": {
+            "get": {
+                "tags": [
+                    "CATEGORY"
+                ],
+                "summary": "Category edit",
+                "operationId": "Ceid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Category Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CATEGORY"
+                ],
+                "summary": "Category Update",
+                "description": "Category Update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Category Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Category name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "image",
+                        "in": "formData",
+                        "description": "Image",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "position",
+                        "in": "formData",
+                        "description": "Position",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "parentcategory",
+                        "in": "formData",
+                        "description": "Parentcategory",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CATEGORY"
+                ],
+                "summary": "Category Delete",
+                "operationId": "Cid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Category Delete",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/listCategory": {
+            "get": {
+                "tags": [
+                    "CATEGORY"
+                ],
+                "summary": "Category List",
+                "operationId": "Clid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Category Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Client": {
+            "get": {
+                "tags": [
+                    "CLIENTS"
+                ],
+                "summary": "Clients Table",
+                "operationId": "cid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/client": {
+            "post": {
+                "tags": [
+                    "CLIENTS"
+                ],
+                "summary": "Client Store",
+                "description": "Client Store",
+                "parameters": [
+                    {
+                        "name": "client_name",
+                        "in": "formData",
+                        "description": "Client name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "city",
+                        "in": "formData",
+                        "description": "City",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "state",
+                        "in": "formData",
+                        "description": "State",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "postal_code",
+                        "in": "formData",
+                        "description": "Postal Code",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "country",
+                        "in": "formData",
+                        "description": "Country",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone_number",
+                        "in": "formData",
+                        "description": "Phone Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fax_number",
+                        "in": "formData",
+                        "description": "Fax Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "web_site",
+                        "in": "formData",
+                        "description": "Website",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "default_currency",
+                        "in": "formData",
+                        "description": "Default Currency",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tax_code",
+                        "in": "formData",
+                        "description": "Tax Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "address",
+                        "in": "formData",
+                        "description": "Address",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Client/{id}": {
+            "get": {
+                "tags": [
+                    "CLIENTS"
+                ],
+                "summary": "Clients edit",
+                "operationId": "Ceid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Client Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CLIENTS"
+                ],
+                "summary": "Clients Update",
+                "description": "Clients Update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Clients Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "client_name",
+                        "in": "formData",
+                        "description": "Client name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "city",
+                        "in": "formData",
+                        "description": "City",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "state",
+                        "in": "formData",
+                        "description": "State",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "postal_code",
+                        "in": "formData",
+                        "description": "Postal Code",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "country",
+                        "in": "formData",
+                        "description": "Country",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone_number",
+                        "in": "formData",
+                        "description": "Phone Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fax_number",
+                        "in": "formData",
+                        "description": "Fax Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "mobile_number",
+                        "in": "formData",
+                        "description": "Mobile Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "web_site",
+                        "in": "formData",
+                        "description": "Website",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "default_currency",
+                        "in": "formData",
+                        "description": "Default Currency",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tax_code",
+                        "in": "formData",
+                        "description": "Tax Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "address",
+                        "in": "formData",
+                        "description": "Address",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CLIENTS"
+                ],
+                "summary": "Client Delete",
+                "operationId": "Cid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Client Delete",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/clientstatementpreview": {
+            "post": {
+                "tags": [
+                    "REPORT - CLIENTSTATEMENT"
+                ],
+                "summary": "Client Store",
+                "description": "clientstatementpreview Store",
+                "parameters": [
+                    {
+                        "name": "company_profile",
+                        "in": "formData",
+                        "description": "Company Profile",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "client_id",
+                        "in": "formData",
+                        "description": "Client Name",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "formData",
+                        "description": "From Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "formData",
+                        "description": "To Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/clientstatement": {
+            "post": {
+                "tags": [
+                    "REPORT - CLIENTSTATEMENT"
+                ],
+                "summary": "Client Store",
+                "description": "clientstatement Store",
+                "parameters": [
+                    {
+                        "name": "company_profile",
+                        "in": "formData",
+                        "description": "Company Profile",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "client_id",
+                        "in": "formData",
+                        "description": "Client Name",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "formData",
+                        "description": "From Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "formData",
+                        "description": "To Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/autoComplete": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "Auto complete",
+                "operationId": "Aid",
+                "parameters": [
+                    {
+                        "name": "invoice_id/quotes_id",
+                        "in": "path",
+                        "description": "Invoice Id or Quotes Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/autoProduct": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "Auto complete Product",
+                "operationId": "Aid",
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "Product_id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/systemdate": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "DateFormat",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/systemquantities": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "System",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/taxrounding": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "Taxrounding",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/listTaxRate": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "Tax",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/listStatus": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "ListStatus",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/invoicestatus": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "InvoiceStatus",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Companyview": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "CompanyView",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/quotesclient/{id}": {
+            "get": {
+                "tags": [
+                    "COMMONAPI"
+                ],
+                "summary": "CompanyView",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "quotes_id",
+                        "in": "path",
+                        "description": "Quotes Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Company": {
+            "get": {
+                "tags": [
+                    "COMPANY"
+                ],
+                "summary": "Company Table",
+                "operationId": "cid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/company": {
+            "post": {
+                "tags": [
+                    "COMPANY"
+                ],
+                "summary": "Company Store",
+                "description": "Company Store",
+                "parameters": [
+                    {
+                        "name": "company_name",
+                        "in": "formData",
+                        "description": "Company name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "default_quote_template",
+                        "in": "formData",
+                        "description": "Default Quote Template",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "city",
+                        "in": "formData",
+                        "description": "City",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "state",
+                        "in": "formData",
+                        "description": "State",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "zipcode",
+                        "in": "formData",
+                        "description": "Postal Code",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "country",
+                        "in": "formData",
+                        "description": "Country",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone",
+                        "in": "formData",
+                        "description": "Phone Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fax",
+                        "in": "formData",
+                        "description": "Fax Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "formData",
+                        "description": "Mobile Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "website",
+                        "in": "formData",
+                        "description": "Website_address",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "default_invoice_template",
+                        "in": "formData",
+                        "description": "Default Invoice Template",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "address",
+                        "in": "formData",
+                        "description": "Address",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Company/{id}": {
+            "get": {
+                "tags": [
+                    "COMPANY"
+                ],
+                "summary": "Company edit",
+                "operationId": "Ceid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Company Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "COMPANY"
+                ],
+                "summary": "Company Delete",
+                "operationId": "Cdid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Company Delete",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/company/{id}": {
+            "post": {
+                "tags": [
+                    "COMPANY"
+                ],
+                "summary": "Company Update",
+                "description": "Company Update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Company Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "company_name",
+                        "in": "formData",
+                        "description": "Company name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "default_quote_template",
+                        "in": "formData",
+                        "description": "Default Quote Template",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "city",
+                        "in": "formData",
+                        "description": "City",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "state",
+                        "in": "formData",
+                        "description": "State",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "zipcode",
+                        "in": "formData",
+                        "description": "Postal Code",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "country",
+                        "in": "formData",
+                        "description": "Country",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone",
+                        "in": "formData",
+                        "description": "Phone Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fax",
+                        "in": "formData",
+                        "description": "Fax Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "formData",
+                        "description": "Mobile Number",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "website",
+                        "in": "formData",
+                        "description": "Website_address",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "default_invoice_template",
+                        "in": "formData",
+                        "description": "Default Invoice Template",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "address",
+                        "in": "formData",
+                        "description": "Address",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Currencies": {
+            "get": {
+                "tags": [
+                    "CURRENCIES"
+                ],
+                "summary": "Currencies Table",
+                "operationId": "cid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/currencies": {
+            "post": {
+                "tags": [
+                    "CURRENCIES"
+                ],
+                "summary": "Currencies Store",
+                "description": "Currencies Store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "placement",
+                        "in": "formData",
+                        "description": "Symbol Placement",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "code",
+                        "in": "formData",
+                        "description": "Code",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "decimal",
+                        "in": "formData",
+                        "description": "Decimal Point",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "symbol",
+                        "in": "formData",
+                        "description": "Symbol",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "thousands",
+                        "in": "formData",
+                        "description": "Thousands Separator",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Currencies/{id}": {
+            "get": {
+                "tags": [
+                    "CURRENCIES"
+                ],
+                "summary": "Currencies edit",
+                "operationId": "Ceid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Currencies Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CURRENCIES"
+                ],
+                "summary": "Currencies Update",
+                "description": "Currencies Update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Currencies Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "placement",
+                        "in": "formData",
+                        "description": "Symbol Placement",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "code",
+                        "in": "formData",
+                        "description": "Code",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "decimal",
+                        "in": "formData",
+                        "description": "Decimal Point",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "symbol",
+                        "in": "formData",
+                        "description": "Symbol",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "thousands",
+                        "in": "formData",
+                        "description": "Thousands Separator",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "CURRENCIES"
+                ],
+                "summary": "Currencies Delete",
+                "operationId": "Cdid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Currencies Delete",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/getDashboard": {
+            "get": {
+                "tags": [
+                    "DASHBOARD"
+                ],
+                "summary": "Invoice Dashboard",
+                "operationId": "cid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/customdate": {
+            "post": {
+                "tags": [
+                    "DASHBOARD"
+                ],
+                "summary": "Invoice customdate",
+                "operationId": "Did",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from_date",
+                        "in": "formData",
+                        "description": "From Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "to_date",
+                        "in": "formData",
+                        "description": "To Date",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/getstatus": {
+            "get": {
+                "tags": [
+                    "DASHBOARD"
+                ],
+                "summary": "Quotes Dashboard",
+                "operationId": "cid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/customdaterange": {
+            "post": {
+                "tags": [
+                    "DASHBOARD"
+                ],
+                "summary": "Quotes customdaterange",
+                "operationId": "Did",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from_date",
+                        "in": "formData",
+                        "description": "From Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "to_date",
+                        "in": "formData",
+                        "description": "To Date",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/login": {
+            "post": {
+                "tags": [
+                    "LOGIN"
+                ],
+                "summary": "Login",
+                "description": "Login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "password",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/PaymentMethod": {
+            "get": {
+                "tags": [
+                    "PAYMENT METHODFORM"
+                ],
+                "summary": "Paymentmethodform Table",
+                "operationId": "pid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "header",
+                        "description": "Id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/paymentmethod": {
+            "post": {
+                "tags": [
+                    "PAYMENT METHODFORM"
+                ],
+                "summary": "Paymentmethod Store",
+                "description": "Paymentmethodform Store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Paymentmethod Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/PaymentMethod/{id}": {
+            "get": {
+                "tags": [
+                    "PAYMENT METHODFORM"
+                ],
+                "summary": "Paymentmethodform edit",
+                "operationId": "Peid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paymentmethod Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "PAYMENT METHODFORM"
+                ],
+                "summary": "Paymentmethodform Update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paymentmethodform Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Paymentmethod Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "PAYMENT METHODFORM"
+                ],
+                "summary": "Paymentmethodform Delete",
+                "operationId": "Cdid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paymentmethodform Delete",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/ProductUnit": {
+            "get": {
+                "tags": [
+                    "PRODUCT UNITS"
+                ],
+                "summary": "Productunit Table",
+                "operationId": "puid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/productunit": {
+            "post": {
+                "tags": [
+                    "PRODUCT UNITS"
+                ],
+                "summary": "Productunit Store",
+                "description": "Productunit Store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "unit",
+                        "in": "formData",
+                        "description": "Unit",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/ProductUnit/{id}": {
+            "get": {
+                "tags": [
+                    "PRODUCT UNITS"
+                ],
+                "summary": "Productunits edit",
+                "operationId": "Pid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Productunits Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "PRODUCT UNITS"
+                ],
+                "summary": "Productunits Update",
+                "description": "Productunit Update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Productunits Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "unit",
+                        "in": "formData",
+                        "description": "Unit",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "PRODUCT UNITS"
+                ],
+                "summary": "Productunit Delete",
+                "operationId": "Pid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Productunits Delete",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Payment": {
+            "get": {
+                "tags": [
+                    "PAYMENT"
+                ],
+                "summary": "Payment table",
+                "operationId": "Peid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Payment/{id}": {
+            "get": {
+                "tags": [
+                    "PAYMENT"
+                ],
+                "summary": "Payment Edit",
+                "operationId": "Peid",
+                "parameters": [
+                    {
+                        "name": "payment_id",
+                        "in": "path",
+                        "description": "Payment Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "PAYMENT"
+                ],
+                "summary": "Payment Update",
+                "description": "Payment Update",
+                "parameters": [
+                    {
+                        "name": "payment_id",
+                        "in": "path",
+                        "description": "Payment Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "payment_amount",
+                        "in": "formData",
+                        "description": "Payment Amount",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "paymentype_id",
+                        "in": "formData",
+                        "description": "Payment Type",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "payment_date",
+                        "in": "formData",
+                        "description": "Payment Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "note",
+                        "in": "formData",
+                        "description": "Note",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "PAYMENT"
+                ],
+                "summary": "Payment Delete",
+                "operationId": "Pdid",
+                "parameters": [
+                    {
+                        "name": "payment_id",
+                        "in": "path",
+                        "description": "Payment Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/paymethod": {
+            "get": {
+                "tags": [
+                    "PAYMENT"
+                ],
+                "summary": "Payment table",
+                "operationId": "Pmid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Product": {
+            "get": {
+                "tags": [
+                    "PRODUCTS - PRODUCTS"
+                ],
+                "summary": "Product Table",
+                "operationId": "Pid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "PRODUCTS - PRODUCTS"
+                ],
+                "summary": "Product Store",
+                "description": "Product Store",
+                "parameters": [
+                    {
+                        "name": "category_id",
+                        "in": "formData",
+                        "description": "Category Id",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "product_name",
+                        "in": "formData",
+                        "description": "Product Name",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tax_rate_id",
+                        "in": "formData",
+                        "description": "Tax Rate",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "price",
+                        "in": "formData",
+                        "description": "Price",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "weight",
+                        "in": "formData",
+                        "description": "Weight",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "unit",
+                        "in": "formData",
+                        "description": "Unit",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "image",
+                        "in": "formData",
+                        "description": "Image",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Product/{id}": {
+            "get": {
+                "tags": [
+                    "PRODUCTS - PRODUCTS"
+                ],
+                "summary": "Product Edit",
+                "operationId": "Psid",
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "Product Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "PRODUCTS - PRODUCTS"
+                ],
+                "summary": "Product Update",
+                "description": "Product Update",
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "Product Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "category_id",
+                        "in": "formData",
+                        "description": "Category Id",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "product_name",
+                        "in": "formData",
+                        "description": "Product Name",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tax_rate_id",
+                        "in": "formData",
+                        "description": "Tax Rate",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "price",
+                        "in": "formData",
+                        "description": "Price",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "weight",
+                        "in": "formData",
+                        "description": "Weight",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "unit",
+                        "in": "formData",
+                        "description": "Unit",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "image",
+                        "in": "formData",
+                        "description": "Image",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "PRODUCTS - PRODUCTS"
+                ],
+                "summary": "Product Delete",
+                "operationId": "Pdid",
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "Product Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Autounit": {
+            "get": {
+                "tags": [
+                    "PRODUCTS - PRODUCTS"
+                ],
+                "summary": "Product Unit",
+                "operationId": "Puid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Quotes": {
+            "get": {
+                "tags": [
+                    "QUOTES"
+                ],
+                "summary": "Quotes Table",
+                "operationId": "qid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "QUOTES"
+                ],
+                "summary": "Quotes Popup",
+                "description": "Quotes Popup",
+                "parameters": [
+                    {
+                        "name": "client_id",
+                        "in": "formData",
+                        "description": "Client Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "in": "formData",
+                        "description": "Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "company_id",
+                        "in": "formData",
+                        "description": "Company Name",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "quotes_template",
+                        "in": "formData",
+                        "description": "group",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Quotes/{id}": {
+            "get": {
+                "tags": [
+                    "QUOTES"
+                ],
+                "summary": "Quotes show",
+                "operationId": "qid",
+                "parameters": [
+                    {
+                        "name": "quotes_id",
+                        "in": "path",
+                        "description": "Quotes Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "QUOTES"
+                ],
+                "summary": "Quotes Delete",
+                "operationId": "iid",
+                "parameters": [
+                    {
+                        "name": "quotes_id",
+                        "in": "path",
+                        "description": "Quotes Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/quoteUpdate": {
+            "post": {
+                "tags": [
+                    "QUOTES"
+                ],
+                "summary": "Quotes store",
+                "description": "Quotes store",
+                "parameters": [
+                    {
+                        "name": "quote_no",
+                        "in": "formData",
+                        "description": "Quote No",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "in": "formData",
+                        "description": "Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "expires_on",
+                        "in": "formData",
+                        "description": "Expires On",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "discount",
+                        "in": "formData",
+                        "description": "Discount",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "currencies_id",
+                        "in": "formData",
+                        "description": "Currency",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "terms",
+                        "in": "formData",
+                        "description": "Terms",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "footer",
+                        "in": "formData",
+                        "description": "Footer",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "notes",
+                        "in": "formData",
+                        "description": "Notes",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "product_name",
+                        "in": "formData",
+                        "description": "Product",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "quantity",
+                        "in": "formData",
+                        "description": "Quantity",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "price",
+                        "in": "formData",
+                        "description": "Price",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tax",
+                        "in": "formData",
+                        "description": "Tax",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "quotessubtotal",
+                        "in": "formData",
+                        "description": "Total",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/revenueclientpreview": {
+            "post": {
+                "tags": [
+                    "REPORT - REVENUECLIENT"
+                ],
+                "summary": "Revenueclientpreview Store",
+                "description": "revenueclientpreview Store",
+                "parameters": [
+                    {
+                        "name": "company_profile",
+                        "in": "formData",
+                        "description": "Company Profile",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "year",
+                        "in": "formData",
+                        "description": "Year",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/revenueclient": {
+            "post": {
+                "tags": [
+                    "REPORT - REVENUECLIENT"
+                ],
+                "summary": "Client Store",
+                "description": "revenueclient Store",
+                "parameters": [
+                    {
+                        "name": "company_profile",
+                        "in": "formData",
+                        "description": "Company Profile",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "year",
+                        "in": "formData",
+                        "description": "Year",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Taxrate": {
+            "get": {
+                "tags": [
+                    "SETTINGS - TAX RATES"
+                ],
+                "summary": "Taxrate",
+                "operationId": "bid",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "SETTINGS - TAX RATES"
+                ],
+                "summary": "Tax Store",
+                "description": "Tax Store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "TaxRate Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "compound",
+                        "in": "formData",
+                        "description": "Compound",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "percentage",
+                        "in": "formData",
+                        "description": "Tax Percentage",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "calculate_as_vat_gst",
+                        "in": "formData",
+                        "description": "Calculate as VAT/GST",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/Taxrate/{id}": {
+            "get": {
+                "tags": [
+                    "SETTINGS - TAX RATES"
+                ],
+                "summary": "Tax Edit",
+                "operationId": "Teid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Tax Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "SETTINGS - TAX RATES"
+                ],
+                "summary": "Tax Update",
+                "description": "Tax Update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Tax Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "TaxRate Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "compound",
+                        "in": "formData",
+                        "description": "Compound",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "percentage",
+                        "in": "formData",
+                        "description": "Tax Percentage",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "calculate_as_vat_gst",
+                        "in": "formData",
+                        "description": "Calculate as VAT/GST",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "SETTINGS - TAX RATES"
+                ],
+                "summary": "Tax Delete",
+                "operationId": "Tdid",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Tax Delete",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/invoice": {
+            "get": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice Table",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice Popup",
+                "description": "Invoice Popup",
+                "parameters": [
+                    {
+                        "name": "client_id",
+                        "in": "formData",
+                        "description": "Client Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "in": "formData",
+                        "description": "Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "company_id",
+                        "in": "formData",
+                        "description": "Company Name",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "invoice_template",
+                        "in": "formData",
+                        "description": "group",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/invoice/{id}": {
+            "get": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice show",
+                "operationId": "iid",
+                "parameters": [
+                    {
+                        "name": "invoice_id",
+                        "in": "path",
+                        "description": "Invoice Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice Delete",
+                "operationId": "iid",
+                "parameters": [
+                    {
+                        "name": "invoice_id",
+                        "in": "path",
+                        "description": "Invoice Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/invoiceupdate": {
+            "post": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice store",
+                "description": "Invoice store",
+                "parameters": [
+                    {
+                        "name": "invoice_number",
+                        "in": "formData",
+                        "description": "Invoice No",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "in": "formData",
+                        "description": "Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "expires_on",
+                        "in": "formData",
+                        "description": "Expires On",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "discount",
+                        "in": "formData",
+                        "description": "Discount",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "currency_id",
+                        "in": "formData",
+                        "description": "Currency",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "terms",
+                        "in": "formData",
+                        "description": "Terms",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "footer",
+                        "in": "formData",
+                        "description": "Footer",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "notes",
+                        "in": "formData",
+                        "description": "Notes",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "product",
+                        "in": "formData",
+                        "description": "Product",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "quantity",
+                        "in": "formData",
+                        "description": "Quantity",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "price",
+                        "in": "formData",
+                        "description": "Price",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tax",
+                        "in": "formData",
+                        "description": "Tax",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "total",
+                        "in": "formData",
+                        "description": "Total",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/invoiceno": {
+            "post": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice number Validation",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "invoice_number",
+                        "in": "path",
+                        "description": "Invoice Number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/invoiceview/{id}": {
+            "get": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice Edit",
+                "operationId": "Iid",
+                "parameters": [
+                    {
+                        "name": "invoice_id",
+                        "in": "path",
+                        "description": "Invoice Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/paymentinvoice/{id}": {
+            "post": {
+                "tags": [
+                    "PAYMENT"
+                ],
+                "summary": "Payment Store",
+                "description": "Payment Store",
+                "parameters": [
+                    {
+                        "name": "invoice_id",
+                        "in": "formData",
+                        "description": "Invoice Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "payment_amount",
+                        "in": "formData",
+                        "description": "Payment Amount",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "paymentype_id",
+                        "in": "formData",
+                        "description": "Payment Type",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "payment_date",
+                        "in": "formData",
+                        "description": "Payment Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "note",
+                        "in": "formData",
+                        "description": "Note",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/paymentview/{id}": {
+            "get": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice Payment View",
+                "operationId": "Ipd",
+                "parameters": [
+                    {
+                        "name": "invoice_id",
+                        "in": "path",
+                        "description": "Invoice Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/invoicecopy": {
+            "post": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice Copy",
+                "description": "Invoice Copy",
+                "parameters": [
+                    {
+                        "name": "invoice_number",
+                        "in": "formData",
+                        "description": "Invoice No",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "in": "formData",
+                        "description": "Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "expires_on",
+                        "in": "formData",
+                        "description": "Expires On",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "discount",
+                        "in": "formData",
+                        "description": "Discount",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "currency_id",
+                        "in": "formData",
+                        "description": "Currency",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "terms",
+                        "in": "formData",
+                        "description": "Terms",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "footer",
+                        "in": "formData",
+                        "description": "Footer",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "notes",
+                        "in": "formData",
+                        "description": "Notes",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "product",
+                        "in": "formData",
+                        "description": "Product",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "quantity",
+                        "in": "formData",
+                        "description": "Quantity",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "price",
+                        "in": "formData",
+                        "description": "Price",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tax",
+                        "in": "formData",
+                        "description": "Tax",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "total",
+                        "in": "formData",
+                        "description": "Total",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/updateInvoice": {
+            "post": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Invoice update",
+                "description": "Invoice update",
+                "parameters": [
+                    {
+                        "name": "invoice_number",
+                        "in": "formData",
+                        "description": "Invoice No",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "in": "formData",
+                        "description": "Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "expires_on",
+                        "in": "formData",
+                        "description": "Expires On",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "discount",
+                        "in": "formData",
+                        "description": "Discount",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "currency_id",
+                        "in": "formData",
+                        "description": "Currency",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "terms",
+                        "in": "formData",
+                        "description": "Terms",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "footer",
+                        "in": "formData",
+                        "description": "Footer",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "notes",
+                        "in": "formData",
+                        "description": "Notes",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "product",
+                        "in": "formData",
+                        "description": "Product",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "quantity",
+                        "in": "formData",
+                        "description": "Quantity",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "price",
+                        "in": "formData",
+                        "description": "Price",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tax",
+                        "in": "formData",
+                        "description": "Tax",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "total",
+                        "in": "formData",
+                        "description": "Total",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/filter": {
+            "get": {
+                "tags": [
+                    "INVOICE"
+                ],
+                "summary": "Company & Status filter",
+                "operationId": "id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "description": "Company Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "invoice_status_id ",
+                        "in": "path",
+                        "description": "Status Id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/paymentcollectedpreview": {
+            "post": {
+                "tags": [
+                    "REPORT - PAYMENTCOLLECTED"
+                ],
+                "summary": "Paymentcollectedpreview Store",
+                "description": "paymentcollectedpreview Store",
+                "parameters": [
+                    {
+                        "name": "company_profile",
+                        "in": "formData",
+                        "description": "Company Profile",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "formData",
+                        "description": "From Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "formData",
+                        "description": "To Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        },
+        "/paymentcollected": {
+            "post": {
+                "tags": [
+                    "REPORT - PAYMENTCOLLECTED"
+                ],
+                "summary": "paymentcollected Store",
+                "description": "paymentcollected Store",
+                "parameters": [
+                    {
+                        "name": "company_profile",
+                        "in": "formData",
+                        "description": "Company Profile",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "formData",
+                        "description": "From Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "formData",
+                        "description": "To Date",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "auth number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {}
+}
