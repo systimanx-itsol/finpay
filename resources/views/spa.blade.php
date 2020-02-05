@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
      <link rel="stylesheet" href="{{ asset ('scss/theme.scss') }}">
      
- <title>INVOICE</title>
+ <title>Free and Simplified invoice for freelances and small business users</title>
+ <meta name="description" content="Online, open source and free invoice createion tool for small businesses, freelances. Manage, Create, and Track invoices and expenses. With Finpay! Download Now!" />
+    
   </head> 
   <body>
     <div id="root"></div>
